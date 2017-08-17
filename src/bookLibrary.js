@@ -8,9 +8,9 @@ function BookLibrary(props) {
       <div className="list-books-title">
         <h1>MyReads</h1>
       </div>
-      <Bookshelf name="Currently Reading" />
-      <Bookshelf name="Want to Read" />
-      <Bookshelf name="Read" />
+      <Bookshelf name="Currently Reading" books={props.currentlyReadingBooks} />
+      <Bookshelf name="Want to Read" books={props.wantToReadBooks} />
+      <Bookshelf name="Read" books={props.readBooks} />
       <div className="open-search">
         <Link to="/search" />
       </div>
