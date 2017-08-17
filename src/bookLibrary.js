@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function BookLibrary(props) {
   return (
@@ -158,7 +159,7 @@ function BookLibrary(props) {
         </div>
       </div>
       <div className="open-search">
-        <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
+        <Link to="/search" />
       </div>
     </div>
   )
