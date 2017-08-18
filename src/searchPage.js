@@ -38,9 +38,10 @@ class Search extends Component {
               this.state.searchResult.map((book) =>
                 <Book
                 key={book.id}
-                title={book.title}
-                authors={book.authors}
-                thumbnail={book.imageLinks.thumbnail}
+                book={book}
+                bookUpdate={(book, shelf) => {
+                  this.props.onUpdateBook(book, shelf)
+                }}
                 />
               )
             )}

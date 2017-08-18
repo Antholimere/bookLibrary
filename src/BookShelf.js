@@ -12,10 +12,10 @@ class Bookshelf extends Component {
             {this.props.books.map((book) =>
               <Book
                 key={book.id}
-                title={book.title}
-                authors={book.authors}
-                thumbnail={book.imageLinks.thumbnail}
-              />
+                book={book}
+                bookUpdate={(book, shelf) => {
+                  this.props.onUpdateBook(book, shelf)
+                }} />
             )}
           </ol>
         </div>
